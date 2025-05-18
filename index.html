@@ -119,6 +119,149 @@
   <p>Ready to build your smart website? Reach out to me on Fiverr:</p>
   <a href="https://www.fiverr.com/users/habeebomilana/seller_dashboard" target="_blank">
     <button>Hire Me on Fiverr</button>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Button</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-btn:active {
+            transform: translateY(1px);
+        }
+        
+        .contact-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.5s ease;
+        }
+        
+        .contact-btn:hover::before {
+            left: 100%;
+        }
+        
+        .contact-dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-btn.active + .contact-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .contact-option {
+            transition: all 0.2s ease;
+        }
+        
+        .contact-option:hover {
+            transform: translateX(5px);
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="relative">
+        <button id="contactBtn" class="contact-btn bg-gradient-to-r from-purple-600 to-blue-500 text-white font-bold py-4 px-8 rounded-full flex items-center space-x-2 pulse">
+            <i class="fas fa-paper-plane"></i>
+            <span>Contact Me</span>
+        </button>
+        
+        <div id="contactDropdown" class="contact-dropdown absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl z-10 overflow-hidden">
+            <a href="tel:+2349042470850" class="contact-option block px-4 py-3 text-gray-800 hover:bg-blue-50 flex items-center">
+                <i class="fas fa-phone-alt mr-3 text-blue-500"></i>
+                <div>
+                    <div class="font-medium">Call Me</div>
+                    <div class="text-sm text-gray-500">+234 904 247 0850</div>
+                </div>
+            </a>
+            <div class="border-t border-gray-200"></div>
+            <a href="mailto:dollybankz200@gmail.com" class="contact-option block px-4 py-3 text-gray-800 hover:bg-blue-50 flex items-center">
+                <i class="fas fa-envelope mr-3 text-blue-500"></i>
+                <div>
+                    <div class="font-medium">Email Me</div>
+                    <div class="text-sm text-gray-500">dollybankz200@gmail.com</div>
+                </div>
+            </a>
+            <div class="border-t border-gray-200"></div>
+            <div class="px-4 py-3 bg-gray-50 text-center">
+                <p class="text-xs text-gray-500">I'll respond as soon as possible</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const contactBtn = document.getElementById('contactBtn');
+        const contactDropdown = document.getElementById('contactDropdown');
+        
+        contactBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            this.classList.remove('pulse');
+            
+            if (this.classList.contains('active')) {
+                contactDropdown.style.display = 'block';
+                setTimeout(() => {
+                    contactDropdown.style.opacity = '1';
+                    contactDropdown.style.visibility = 'visible';
+                    contactDropdown.style.transform = 'translateY(0)';
+                }, 10);
+            } else {
+                contactDropdown.style.opacity = '0';
+                contactDropdown.style.visibility = 'hidden';
+                contactDropdown.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    contactDropdown.style.display = 'none';
+                }, 300);
+            }
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!contactBtn.contains(event.target) && !contactDropdown.contains(event.target)) {
+                contactBtn.classList.remove('active');
+                contactDropdown.style.opacity = '0';
+                contactDropdown.style.visibility = 'hidden';
+                contactDropdown.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    contactDropdown.style.display = 'none';
+                }, 300);
+            }
+        });
+    </script>
+</body>
+</html>
   </a>
 </section>
 
