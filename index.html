@@ -1,112 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Habeeb Omilana | Portfolio</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-  <style>
-    body {
-      background-color: #0f0f0f;
-      color: #f0f0f0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .sidebar a:hover {
-      color: #ff0055;
-      transition: 0.3s;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Habeeb Omilana | Frontend Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="flex flex-col md:flex-row">
-  <!-- Sidebar -->
-  <aside class="sidebar hidden md:flex w-64 h-screen bg-gray-900 p-6 fixed md:static flex-col">
-    <h1 class="text-3xl font-bold mb-12 text-white">Habeeb</h1>
-    <nav class="space-y-4 text-gray-400">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
+
+<body>
+
+<header>
+    <h1>Habeeb Omilana</h1>
+    <nav>
+        <a href="#projects">Work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </aside>
+</header>
 
-  <!-- Main Content -->
-  <main class="w-full p-6 md:ml-64">
-    <!-- Hero -->
-    <section class="mb-20">
-      <h2 class="text-4xl sm:text-5xl font-bold text-white" id="intro">Hi, I'm <span class="text-pink-500">Milannszzz</span>,<br />frontend developer</h2>
-      <p class="mt-4 text-gray-400">I build smart websites for people and businesses.</p>
-      <a href="https://www.fiverr.com/s/8zopmAZ" target="_blank" class="inline-block mt-6 px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700">Hire Me on Fiverr</a>
-    </section>
+<!-- HERO -->
+<section class="hero">
+    <h2>I Build Websites That Help Businesses Get Customers</h2>
+    <p>Clean, fast, and professional websites designed to grow your brand online.</p>
 
-    <!-- About -->
-    <section id="about" class="mb-16">
-      <h3 class="text-2xl font-bold text-pink-500 mb-4">About Me</h3>
-      <p>
-        I'm Habeeb Omilana, a frontend web builder based in Nigeria. I help individuals and small businesses create modern, one-page websites that are visually appealing and easy to navigate. I deliver clean code, fast-loading designs, and mobile-ready layouts.
-      </p>
-    </section>
+    <div class="buttons">
+        <a class="btn" href="https://www.fiverr.com/YOUR_USERNAME" target="_blank">Hire Me on Fiverr</a>
+        <a class="btn outline" href="https://wa.me/2349042470850" target="_blank">WhatsApp Me</a>
+    </div>
+</section>
 
-    <!-- Services -->
-    <section id="services" class="mb-16">
-      <h3 class="text-2xl font-bold text-pink-500 mb-4">Services</h3>
-      <ul class="list-disc list-inside space-y-2">
-        <li>One-page business or personal websites</li>
-        <li>Product landing pages</li>
-        <li>Mobile responsive design</li>
-        <li>HTML/CSS only — fast and light</li>
-      </ul>
-    </section>
+<!-- ABOUT -->
+<section class="about">
+    <h2>About Me</h2>
+    <p>
+        I am a frontend developer who builds modern, responsive, and conversion-focused websites
+        for businesses, startups, and personal brands.
+    </p>
+</section>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="mb-16">
-      <h3 class="text-2xl font-bold text-pink-500 mb-4">Portfolio</h3>
-      <div class="space-y-4">
-        <div>
-          <p class="font-semibold">My gym website</p>
-          <a href="https://milannszzz.github.io/Milannszzz-gym-website/" class="text-blue-400 hover:underline" target="_blank">View Project</a>
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>My Work</h2>
+
+    <div class="project-list">
+
+        <a class="project" href="https://milannszzz.github.io/isaac-s-website/" target="_blank">
+            <h3>Isaac’s Website</h3>
+            <p>Business / personal website</p>
+        </a>
+
+        <a class="project" href="https://milannszzz.github.io/milannszzz/" target="_blank">
+            <h3>Milanns Portfolio</h3>
+            <p>Developer portfolio project</p>
+        </a>
+
+        <a class="project" href="https://milannszzz.github.io/Jackson-AUTOS/#home" target="_blank">
+            <h3>Jackson Autos</h3>
+            <p>Car dealership website</p>
+        </a>
+
+    </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+    <h2>Pricing</h2>
+
+    <div class="pricing-list">
+
+        <div class="price-card">
+            <h3>Starter</h3>
+            <p class="price">₦20,000</p>
+            <ul>
+                <li>1 Page Website</li>
+                <li>Mobile Friendly</li>
+                <li>Basic Design</li>
+            </ul>
         </div>
-        <div>
-          <p class="font-semibold">Queen's Closet – Fashion Store Demo</p>
-          <a href="https://milannszzz.github.io/milannszzz/" class="text-blue-400 hover:underline" target="_blank">View Project</a>
-        </div>
-        <div>
-          <p class="font-semibold">Ball – Sports Promo Landing Page</p>
-          <a href="https://milannszzz.github.io/ball-/" class="text-blue-400 hover:underline" target="_blank">View Project</a>
-        </div>
-        <div>
-          <p class="font-semibold"> Skye cosmetics Website – Personal Branding Page</p>
-          <a href="https://milannszzz.github.io/isaac-s-website/" class="text-blue-400 hover:underline" target="_blank">View Project</a>
-        </div>
-        <div>
-          <p class="font-semibold"> The Milan's Family – Family Showcase Website</p>
-          <a href="https://milannszzz.github.io/our-family/" class="text-blue-400 hover:underline" target="_blank">View Project</a>
-        </div>
-        <div>
-          <p class="font-semibold"> Jackson's Autos</p>
-          <a href="https://milannszzz.github.io/Jackson-AUTOS/#home" class="text-blue-400 hover:underline" target="_blank">View Project</a>
-        </div>
-      </div>
-    </section>
 
-    <!-- Contact -->
-    <section id="contact" class="mb-10">
-      <h3 class="text-2xl font-bold text-pink-500 mb-4">Contact Me</h3>
-      <p class="mb-2">Ready to build your smart website? Reach out to me on Fiverr:</p>
-      <a href="https://www.fiverr.com/users/habeebomilana/seller_dashboard" target="_blank" class="inline-block mb-4 px-6 py-3 border border-pink-600 text-pink-500 rounded hover:bg-pink-600 hover:text-white transition">Hire Me on Fiverr</a>
-      <p>Email: <a href="mailto:dollybankz200@gmail.com" class="text-blue-400 hover:underline">dollybankz200@gmail.com</a></p>
-      <p>Phone: <a href="tel:+2349042470850" class="text-blue-400 hover:underline">+234 904 247 0850</a></p>
-    </section>
+        <div class="price-card featured">
+            <h3>Business</h3>
+            <p class="price">₦50,000</p>
+            <ul>
+                <li>5 Pages Website</li>
+                <li>Modern UI Design</li>
+                <li>Contact Section</li>
+            </ul>
+        </div>
 
-    <footer class="text-center text-sm text-gray-500 pt-10">
-      &copy; 2025 SmartSites by Habeeb. All rights reserved.
-    </footer>
-  </main>
+        <div class="price-card">
+            <h3>Premium</h3>
+            <p class="price">₦100,000+</p>
+            <ul>
+                <li>Full Website</li>
+                <li>Advanced Features</li>
+                <li>Priority Support</li>
+            </ul>
+        </div>
 
-  <!-- GSAP Animations -->
-  <script>
-    gsap.from("#intro", { duration: 1, y: -50, opacity: 0 });
-    gsap.from("nav a", { duration: 1, stagger: 0.2, x: -30, opacity: 0 });
-  </script>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Let’s Work Together</h2>
+
+    <p>Email: dollybankz200@gmail.com</p>
+    <p>Phone: +234 904 247 0850</p>
+
+    <div class="buttons">
+        <a class="btn" href="https://www.fiverr.com/YOUR_USERNAME" target="_blank">Hire Me on Fiverr</a>
+        <a class="btn outline" href="https://wa.me/2349042470850" target="_blank">Chat on WhatsApp</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Habeeb Omilana. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
