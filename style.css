@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #111;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #000;
+}
+
+/* HERO */
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 40px;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #666;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* PROJECTS */
+.projects {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.project-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    border: 1px solid #eee;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* CONTACT */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
