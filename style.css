@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background: #ffffff;
-    color: #111;
+    background: #f7f8fc;
+    color: #1f1f1f;
     line-height: 1.6;
 }
 
@@ -15,159 +15,105 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    border-bottom: 1px solid #eee;
+    padding: 20px 10%;
+    background: white;
     position: sticky;
     top: 0;
-    background: white;
+    border-bottom: 1px solid #eee;
 }
 
-header h1 {
+.logo {
+    font-weight: bold;
     font-size: 18px;
 }
 
 nav a {
-    margin-left: 18px;
+    margin-left: 20px;
     text-decoration: none;
-    color: #555;
-}
-
-nav a:hover {
-    color: #000;
+    color: #333;
 }
 
 /* HERO */
 .hero {
+    padding: 100px 10%;
     text-align: center;
-    padding: 120px 20px;
 }
 
-.hero h2 {
-    font-size: 48px;
-    max-width: 800px;
-    margin: auto;
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    margin-top: 15px;
     color: #666;
+    margin-bottom: 25px;
 }
 
-.buttons {
-    margin-top: 25px;
+.hero-buttons {
     display: flex;
-    justify-content: center;
     gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    padding: 12px 28px;
-    background: #111;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #333;
-}
-
-.btn.outline {
-    background: transparent;
-    color: #111;
-    border: 1px solid #111;
+    justify-content: center;
 }
 
 /* SECTIONS */
 section {
-    padding: 80px 20px;
-    text-align: center;
+    padding: 80px 10%;
 }
 
-.about p {
-    max-width: 700px;
-    margin: auto;
-    color: #555;
-}
-
-/* PROJECTS */
-.project-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.project {
-    display: block;
-    width: 260px;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-radius: 10px;
+/* BUTTONS */
+.btn {
+    padding: 12px 20px;
+    border: 1px solid #ddd;
     text-decoration: none;
-    color: inherit;
+    color: #333;
+    border-radius: 8px;
     transition: 0.3s;
 }
 
-.project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+.btn:hover {
+    transform: translateY(-2px);
 }
 
-/* PRICING */
-.pricing-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.primary {
+    background: #2563eb;
+    color: white;
+    border: none;
+}
+
+/* PROJECT GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
     margin-top: 30px;
 }
 
-.price-card {
-    width: 260px;
-    padding: 25px;
-    border: 1px solid #eee;
-    border-radius: 10px;
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
 }
 
-.price {
-    font-size: 24px;
-    margin: 10px 0;
+.card:hover {
+    transform: translateY(-6px);
 }
 
-.price-card ul {
-    list-style: none;
-    margin-top: 10px;
-}
-
-.price-card ul li {
-    margin: 5px 0;
-}
-
-.featured {
-    border: 2px solid #111;
+/* CONTACT */
+.contact-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
 }
 
 /* FOOTER */
 footer {
-    padding: 20px;
     text-align: center;
+    padding: 30px;
+    background: white;
     border-top: 1px solid #eee;
-    color: #777;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero h2 {
-        font-size: 32px;
-    }
+    margin-top: 50px;
 }
