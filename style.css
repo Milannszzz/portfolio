@@ -8,88 +8,166 @@
 body {
     background: #ffffff;
     color: #111;
+    line-height: 1.6;
 }
 
-/* NAVBAR */
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
+    align-items: center;
+    padding: 20px 60px;
     border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    background: white;
 }
 
 header h1 {
-    font-size: 20px;
+    font-size: 18px;
 }
 
-header nav a {
-    margin-left: 20px;
+nav a {
+    margin-left: 18px;
     text-decoration: none;
     color: #555;
-    transition: 0.3s;
 }
 
-header nav a:hover {
+nav a:hover {
     color: #000;
 }
 
 /* HERO */
 .hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #666;
+}
+
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 28px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.btn.outline {
+    background: transparent;
+    color: #111;
+    border: 1px solid #111;
+}
+
+/* SECTIONS */
+section {
     padding: 80px 20px;
     text-align: center;
 }
 
-.hero h2 {
-    font-size: 40px;
-}
-
-.hero p {
-    margin-top: 10px;
-    color: #666;
-}
-
-.btn {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+.about p {
+    max-width: 700px;
+    margin: auto;
+    color: #555;
 }
 
 /* PROJECTS */
-.projects {
-    padding: 60px 20px;
-    text-align: center;
-}
-
 .project-list {
     display: flex;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .project {
-    border: 1px solid #eee;
+    display: block;
+    width: 260px;
     padding: 20px;
-    width: 250px;
-    border-radius: 8px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
     transition: 0.3s;
 }
 
 .project:hover {
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* CONTACT */
-.contact {
-    padding: 60px 20px;
-    text-align: center;
+/* PRICING */
+.pricing-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
+.price-card {
+    width: 260px;
+    padding: 25px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.price {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.price-card ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.price-card ul li {
+    margin: 5px 0;
+}
+
+.featured {
+    border: 2px solid #111;
+}
+
+/* FOOTER */
 footer {
-    text-align: center;
     padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
     color: #777;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
 }
