@@ -34,6 +34,28 @@ nav a {
 }
 
 /* HERO */
+.intro {
+    color: #2563eb;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.subtext {
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    color: #666;
+}
 .hero {
     padding: 100px 10%;
     text-align: center;
