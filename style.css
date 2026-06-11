@@ -272,3 +272,7 @@ section p {
     }
 
 }
+#projects h2 {
+    margin-bottom: 35px;
+    font-size: 40px;
+}
